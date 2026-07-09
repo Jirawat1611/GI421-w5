@@ -22,23 +22,59 @@ namespace BU.Workshop
         [SerializeField]
         private LayerMask _groundLayer;
 
+        [SerializeField]
+        private float _defaultFOV = 60f;
+
+        [SerializeField]
+        private float _zoomedFOV = 30f;
+
+        [SerializeField]
+        private float _zoomSmoothSpeed = 5f;
+
+        [SerializeField]
         private CharacterController _characterController;
-        private Camera _mainCamera;
-        private float _xRotation = 0f;
+
+        [SerializeField]
+        private Camera _camera;
+
+        private float _xRotation;
         private Vector3 _velocity;
         private bool _isGrounded;
+        private float _targetFOV;
 
         private void Start()
         {
-            _characterController = GetComponent<CharacterController>();
-            _mainCamera = Camera.main;
+            _targetFOV = _defaultFOV;
             Cursor.lockState = CursorLockMode.Locked;
+
+            _camera.fieldOfView = _defaultFOV;
         }
 
         private void Update()
         {
             HandleMouseLook();
             HandleMovement();
+            HandleZoom();
+        }
+
+        private void HandleZoom()
+        {
+            // Toggle zoom on Z key press
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                _targetFOV = _zoomedFOV;
+            }
+            else if (Input.GetKeyUp(KeyCode.Mouse1))
+            {
+                _targetFOV = _defaultFOV;
+            }
+
+            // Smoothly interpolate to target FOV while keeping LOD the same
+            _camera.fieldOfView = Mathf.Lerp(
+                _camera.fieldOfView,
+                _targetFOV,
+                _zoomSmoothSpeed * Time.deltaTime
+            );
         }
 
         private void HandleMouseLook()
@@ -53,7 +89,7 @@ namespace BU.Workshop
             // Rotate camera up/down
             _xRotation -= mouseY;
             _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
-            _mainCamera.transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
+            _camera.transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
         }
 
         private void HandleMovement()
