@@ -305,7 +305,6 @@ GameObject:
   m_Component:
   - component: {fileID: 852446833}
   - component: {fileID: 852446832}
-  - component: {fileID: 852446834}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -320,7 +319,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852446831}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df4b3ad8500127f49b61b89f1f733b92, type: 3}
   m_Name: 
@@ -346,21 +345,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &852446834
-MonoBehaviour:
+--- !u!1001 &893123748
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852446831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fd989d2f5459da448eb52e119ad0cea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BU.Workshop.ResourceSceneManager
-  _resourcePaths:
-  - mountain_terrain
-  _spawnOffset: 5
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3573447397578554348, guid: 234703cae2af4b747a5860860ab662c3, type: 3}
+      propertyPath: m_Name
+      value: mountain_terrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241475871674130774, guid: 234703cae2af4b747a5860860ab662c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241475871674130774, guid: 234703cae2af4b747a5860860ab662c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241475871674130774, guid: 234703cae2af4b747a5860860ab662c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 42.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241475871674130774, guid: 234703cae2af4b747a5860860ab662c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241475871674130774, guid: 234703cae2af4b747a5860860ab662c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241475871674130774, guid: 234703cae2af4b747a5860860ab662c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241475871674130774, guid: 234703cae2af4b747a5860860ab662c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241475871674130774, guid: 234703cae2af4b747a5860860ab662c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241475871674130774, guid: 234703cae2af4b747a5860860ab662c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241475871674130774, guid: 234703cae2af4b747a5860860ab662c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 234703cae2af4b747a5860860ab662c3, type: 3}
 --- !u!1 &1106363866
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,8 +576,9 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 852446833}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1106363870}
-  - {fileID: 852446833}
   - {fileID: 1479160004}
+  - {fileID: 893123748}
