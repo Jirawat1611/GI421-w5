@@ -16,8 +16,8 @@ namespace BU.Workshop
                 actionOnRelease: bullet => bullet.gameObject.SetActive(false),
                 actionOnDestroy: bullet => Destroy(bullet),
                 collectionCheck: true,
-                defaultCapacity: 10,
-                maxSize: 50
+                defaultCapacity: 2000,
+                maxSize: 100000000
             );
         }
 
