@@ -15,8 +15,13 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: d854ba0533d4f4e44adb505c75e090b1
   m_SerializeEntries:
-  - m_GUID: 234703cae2af4b747a5860860ab662c3
-    m_Address: Assets/ArtAssets/3d model/mountain_terrain.prefab
+  - m_GUID: 35b9c858c8f1b9f43b9582bdbb28c397
+    m_Address: Assets/ArtAssets/3d model/Moving_Castle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a4e1f70481f758f488fbb5cb10991842
+    m_Address: Assets/ArtAssets/3d model/Moving_Castle.fbx
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
